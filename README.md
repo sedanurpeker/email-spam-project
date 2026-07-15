@@ -14,12 +14,12 @@ The final production model — a **Bidirectional GRU network with a custom Atten
 
 ## ✨ Features
 
-- 📊 **Full EDA pipeline** — class balance, message-length distribution, most frequent words per class
-- 🧹 **Text preprocessing** — lowercasing, URL/number normalization, punctuation removal
-- 🤖 **Classical ML baselines** — Naive Bayes, Logistic Regression, Linear SVM, Random Forest (TF-IDF features)
-- 🧠 **Deep learning models** — BiGRU and BiGRU + Attention (Keras/TensorFlow)
-- 📈 **Model comparison** with Accuracy / Precision / Recall / F1 and ROC-AUC
-- 🖥️ **Streamlit demo app** with:
+-  **Full EDA pipeline** — class balance, message-length distribution, most frequent words per class
+-  **Text preprocessing** — lowercasing, URL/number normalization, punctuation removal
+-  **Classical ML baselines** — Naive Bayes, Logistic Regression, Linear SVM, Random Forest (TF-IDF features)
+-  **Deep learning models** — BiGRU and BiGRU + Attention (Keras/TensorFlow)
+-  **Model comparison** with Accuracy / Precision / Recall / F1 and ROC-AUC
+-  **Streamlit demo app** with:
   - Spam probability & confidence score
   - Rule-based "why was this flagged" explanation panel
   - Expandable technical view of the preprocessed model input
