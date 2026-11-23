@@ -1,4 +1,4 @@
-# 🛡️ Explainable Spam Detection System (BiGRU + Attention)
+#  Explainable Spam Detection System (BiGRU + Attention)
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-ff6f00.svg)](https://www.tensorflow.org/)
@@ -15,7 +15,7 @@ A deep learning based SMS/email spam classifier that goes beyond a plain "spam o
 
 ---
 
-## 📑 Table of Contents
+##  Table of Contents
 
 - [Overview](#-overview)
 - [Features](#-features)
@@ -31,7 +31,7 @@ A deep learning based SMS/email spam classifier that goes beyond a plain "spam o
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project builds and compares several machine learning and deep learning models to classify SMS messages as **Spam** or **Ham** (legitimate), using the classic SMS Spam Collection dataset (5,572 messages).
 
@@ -39,7 +39,7 @@ The final production model — a **Bidirectional GRU network with a custom Atten
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Full EDA pipeline** — class balance, message-length distribution, most frequent words per class
 - **Text preprocessing** — lowercasing, URL/number normalization, punctuation removal
@@ -54,7 +54,7 @@ The final production model — a **Bidirectional GRU network with a custom Atten
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 ├── notebooks/
@@ -74,7 +74,7 @@ The final production model — a **Bidirectional GRU network with a custom Atten
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 | Metric | Value |
 |---|---|
@@ -86,7 +86,7 @@ The final production model — a **Bidirectional GRU network with a custom Atten
 
 ---
 
-## 🧪 Methodology
+##  Methodology
 
 1. **EDA** — class distribution plot, message-length histogram by class, most common words per class (`Counter`)
 2. **Cleaning** — lowercase → replace URLs → replace digits with `"number"` token → strip punctuation → normalize whitespace
@@ -97,7 +97,7 @@ The final production model — a **Bidirectional GRU network with a custom Atten
 
 ---
 
-## 🏆 Results
+##  Results
 
 | Model | Accuracy | Precision | Recall | F1 Score |
 |---|---|---|---|---|
@@ -108,13 +108,13 @@ The final production model — a **Bidirectional GRU network with a custom Atten
 | BiGRU | 98.65% | 97.86% | 91.95% | 94.81% |
 | BiGRU + Attention | 98.65% | 97.86% | 91.95% | 94.81% |
 
-> ⚠️ **Note:** BiGRU and BiGRU + Attention currently show identical metrics above — double-check `model_results.csv` and re-run evaluation for the attention variant, since this is likely a copy artifact rather than the true result.
+>  **Note:** BiGRU and BiGRU + Attention currently show identical metrics above — double-check `model_results.csv` and re-run evaluation for the attention variant, since this is likely a copy artifact rather than the true result.
 
 The **BiGRU + Attention** model was selected as the final deployed model for its strong balance of precision and recall, plus the interpretability benefits of the attention mechanism.
 
 ---
 
-## 🖥️ Running the App Locally
+##  Running the App Locally
 
 ```bash
 # 1. Clone the repository
@@ -136,7 +136,7 @@ Then open the local URL shown in your terminal (usually `http://localhost:8501`)
 
 ---
 
-## ⚠️ Limitations
+##  Limitations
 
 - Trained on English SMS text — performance on other languages or long-form emails may vary
 - The "explanation" panel in the app is a **rule-based keyword heuristic**, not the model's real attention weights — it's meant as a human-readable aid, not a mechanistic interpretation
@@ -144,45 +144,45 @@ Then open the local URL shown in your terminal (usually `http://localhost:8501`)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 Python · TensorFlow / Keras · scikit-learn · pandas · NumPy · Seaborn / Matplotlib · Streamlit
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the **MIT License** — feel free to fork, adapt, and build on it for educational and portfolio purposes.
 
 ---
 ---
 
-# 🇹🇷 Açıklanabilir Spam Tespit Sistemi (BiGRU + Attention)
+#  Açıklanabilir Spam Tespit Sistemi (BiGRU + Attention)
 
 Bir mesajı yalnızca "spam mı değil mi" diye etiketlemekle kalmayıp, **neden** spam olarak işaretlendiğini de açıklayan, derin öğrenme tabanlı bir SMS/e-posta spam sınıflandırıcısı. Modern ve sunuma hazır bir Streamlit arayüzü ile birlikte gelir.
 
 <!-- 📸 TODO: Uygulamanın ekran görüntüsünü veya GIF'ini buraya ekleyin -->
 
-## 📌 Genel Bakış
+##  Genel Bakış
 
 Bu proje, klasik SMS Spam Collection veri seti (5.572 mesaj) kullanılarak SMS mesajlarını **Spam** veya **Ham** (normal) olarak sınıflandırmak için çeşitli makine öğrenmesi ve derin öğrenme modellerini eğitip karşılaştırır.
 
 Üretime alınan nihai model — özel bir Attention katmanına sahip **Bidirectional GRU (BiGRU)** ağı — etkileşimli bir Streamlit web uygulamasında yayınlanır. Uygulama; tahmini, spam olasılığını, model güven seviyesini ve kararı muhtemelen etkileyen anahtar kelime kalıplarına dayalı, kural tabanlı ve insan tarafından okunabilir bir açıklamayı gösterir.
 
-## ✨ Özellikler
+##  Özellikler
 
-- 📊 **Kapsamlı KVA (EDA) süreci** — sınıf dengesi, mesaj uzunluğu dağılımı, sınıf başına en sık kelimeler
-- 🧹 **Metin ön işleme** — küçük harfe çevirme, URL/sayı normalizasyonu, noktalama işaretlerinin temizlenmesi
-- 🤖 **Klasik ML temel modelleri** — Naive Bayes, Lojistik Regresyon, Linear SVM, Random Forest (TF-IDF özellikleri)
-- 🧠 **Derin öğrenme modelleri** — BiGRU ve BiGRU + Attention (Keras/TensorFlow)
-- 📈 **Model karşılaştırması** — Accuracy / Precision / Recall / F1 ve ROC-AUC metrikleri
-- 🖥️ **Streamlit demo uygulaması özellikleri:**
+-  **Kapsamlı KVA (EDA) süreci** — sınıf dengesi, mesaj uzunluğu dağılımı, sınıf başına en sık kelimeler
+-  **Metin ön işleme** — küçük harfe çevirme, URL/sayı normalizasyonu, noktalama işaretlerinin temizlenmesi
+-  **Klasik ML temel modelleri** — Naive Bayes, Lojistik Regresyon, Linear SVM, Random Forest (TF-IDF özellikleri)
+-  **Derin öğrenme modelleri** — BiGRU ve BiGRU + Attention (Keras/TensorFlow)
+-  **Model karşılaştırması** — Accuracy / Precision / Recall / F1 ve ROC-AUC metrikleri
+-  **Streamlit demo uygulaması özellikleri:**
   - Spam olasılığı ve güven skoru
   - "Neden bu şekilde işaretlendi?" kural tabanlı açıklama paneli
   - Modele giden ön işlenmiş metni gösteren genişletilebilir teknik detay bölümü
   - Modern cam efektli (glassmorphism) özel arayüz
 
-## 🗂️ Proje Yapısı
+##  Proje Yapısı
 
 ```
 ├── notebooks/
@@ -200,7 +200,7 @@ Bu proje, klasik SMS Spam Collection veri seti (5.572 mesaj) kullanılarak SMS m
 └── README.md
 ```
 
-## 📊 Veri Seti
+##  Veri Seti
 
 | Metrik | Değer |
 |---|---|
@@ -210,7 +210,7 @@ Bu proje, klasik SMS Spam Collection veri seti (5.572 mesaj) kullanılarak SMS m
 | Ort. ham uzunluğu | ~71 karakter |
 | Ort. spam uzunluğu | ~139 karakter |
 
-## 🧪 Yöntem
+##  Yöntem
 
 1. **KVA** — sınıf dağılımı grafiği, sınıfa göre mesaj uzunluğu histogramı, sınıf başına en sık kelimeler (`Counter`)
 2. **Temizleme** — küçük harf → URL'leri değiştir → rakamları `"number"` token'ı ile değiştir → noktalama işaretlerini kaldır → boşlukları normalize et
@@ -219,7 +219,7 @@ Bu proje, klasik SMS Spam Collection veri seti (5.572 mesaj) kullanılarak SMS m
 5. **Klasik modeller** — TF-IDF (5.000 özellik, İngilizce stop-word'ler) + Naive Bayes / Lojistik Regresyon / Linear SVM / Random Forest
 6. **Derin öğrenme** — Keras Tokenizer (10.000 kelime dağarcığı) + pad edilmiş diziler (maksimum uzunluk 100) → Embedding → Bidirectional GRU → özel Attention katmanı → Dense → Sigmoid
 
-## 🏆 Sonuçlar
+##  Sonuçlar
 
 | Model | Accuracy | Precision | Recall | F1 Score |
 |---|---|---|---|---|
@@ -230,11 +230,11 @@ Bu proje, klasik SMS Spam Collection veri seti (5.572 mesaj) kullanılarak SMS m
 | BiGRU | %98,65 | %97,86 | %91,95 | %94,81 |
 | BiGRU + Attention | %98,65 | %97,86 | %91,95 | %94,81 |
 
-> ⚠️ **Not:** BiGRU ve BiGRU + Attention satırlarındaki metrikler birebir aynı görünüyor — `model_results.csv` dosyasını kontrol edip attention modelini yeniden değerlendirmen faydalı olur, bu muhtemelen kopyalama kaynaklı bir hata.
+>  **Not:** BiGRU ve BiGRU + Attention satırlarındaki metrikler birebir aynı görünüyor — `model_results.csv` dosyasını kontrol edip attention modelini yeniden değerlendirmen faydalı olur, bu muhtemelen kopyalama kaynaklı bir hata.
 
 **BiGRU + Attention** modeli, precision ve recall arasındaki güçlü dengesi ve attention mekanizmasının sağladığı yorumlanabilirlik avantajı nedeniyle nihai üretim modeli olarak seçilmiştir.
 
-## 🖥️ Uygulamayı Yerelde Çalıştırma
+##  Uygulamayı Yerelde Çalıştırma
 
 ```bash
 # 1. Depoyu klonlayın
@@ -254,16 +254,16 @@ streamlit run app.py
 
 Ardından terminalde görünen yerel URL'yi (genellikle `http://localhost:8501`) tarayıcınızda açın.
 
-## ⚠️ Sınırlamalar
+##  Sınırlamalar
 
 - Model İngilizce SMS metinleri üzerinde eğitilmiştir — diğer diller veya uzun e-postalardaki performansı değişebilir
 - Uygulamadaki "açıklama" paneli, modelin gerçek attention ağırlıkları değil, **kural tabanlı bir anahtar kelime buluşsalıdır (heuristic)** — mekanik bir yorumlama değil, insan tarafından okunabilir bir yardımcı olarak tasarlanmıştır
 - Doğrudan kimlik avı (phishing) veya çok dilli tespit için tasarlanmamıştır
 
-## 🛠️ Teknoloji Yığını
+##  Teknoloji Yığını
 
 Python · TensorFlow / Keras · scikit-learn · pandas · NumPy · Seaborn / Matplotlib · Streamlit
 
-## 📄 Lisans
+##  Lisans
 
 Bu proje **MIT Lisansı** altında sunulmuştur — eğitim ve portfolyo amaçlı olarak fork'layabilir, uyarlayabilir ve üzerine geliştirme yapabilirsiniz.
